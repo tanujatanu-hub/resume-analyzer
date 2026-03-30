@@ -12,7 +12,10 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: 'http://localhost:3000',
+  origin: [
+    'http://localhost:3000', 
+    'https://resume-analyzer-1-juf2.onrender.com'
+  ],
   credentials: true
 }));
 app.use(express.json());
